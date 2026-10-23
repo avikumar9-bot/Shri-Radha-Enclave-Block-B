@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#123b52">
+  <meta name="description" content="Notices, maintenance information and important updates for Shri Radha Enclave Block B.">
+  <title>Shri Radha Enclave – Block B</title>
+  <link rel="manifest" href="./manifest.json">
+  <link rel="icon" href="./icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="brand-icon" aria-hidden="true">🏢</div>
+    <div>
+      <h1>Shri Radha Enclave</h1>
+      <p>Block B · Society Connect</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="welcome">
+      <p class="eyebrow">WELCOME TO OUR COMMUNITY</p>
+      <h2>Your society, in one place.</h2>
+      <p>Find society notices, maintenance information,
+        payment instructions and important contacts.</p>
+    </section>
+
+    <section aria-labelledby="notice-heading">
+      <h2 id="notice-heading">Latest Notices</h2>
+      <div id="notices" class="notice-list">
+        <article class="notice">
+          <span class="tag">Welcome</span>
+          <h3>Welcome to our society app</h3>
+          <p>Use this page to find important society updates.
+            Official notices will appear here after publishing is configured.</p>
+          <small>Sample notice · Replace before launch</small>
+        </article>
+      </div>
+    </section>
+
+    <section aria-labelledby="services-heading">
+      <h2 id="services-heading">Society Services</h2>
+      <div class="grid">
+        <a class="tile" href="#maintenance">
+          <span class="tile-icon">₹</span>
+          <strong>Maintenance</strong>
+          <span>Charges and due dates</span>
+        </a>
+        <a class="tile" href="#payments">
+          <span class="tile-icon">↗</span>
+          <strong>Payment Instructions</strong>
+          <span>How to make payments</span>
+        </a>
+        <a class="tile" href="#documents">
+          <span class="tile-icon">▤</span>
+          <strong>Documents</strong>
+          <span>Society rules and forms</span>
+        </a>
+        <a class="tile" href="#contacts">
+          <span class="tile-icon">☎</span>
+          <strong>Important Contacts</strong>
+          <span>Society assistance</span>
+        </a>
+      </div>
+    </section>
+
+    <section id="maintenance" class="info-card">
+      <h2>Maintenance Information</h2>
+      <p>Maintenance amounts and due dates will be published
+        here by the society administrators.</p>
+      <p class="muted">No official amount has been configured yet.</p>
+    </section>
+
+    <section id="payments" class="info-card">
+      <h2>Payment Instructions</h2>
+      <p>Follow only payment instructions confirmed by the
+        authorized society administrators.</p>
+      <p class="muted">Verified payment details will be added before launch.</p>
+    </section>
+
+    <section id="documents" class="info-card">
+      <h2>Society Documents</h2>
+      <p>Society rules and approved public forms will be
+        available in this section.</p>
+    </section>
+
+    <section id="contacts" class="info-card">
+      <h2>Important Contacts</h2>
+      <p>Contact information will be added after it is
+        confirmed by the society administrators.</p>
+    </section>
+
+    <section class="info-card">
+      <h2>Member Receipts</h2>
+      <p>Individual payment receipts will require secure
+        member sign-in. This feature is not enabled yet.</p>
+    </section>
+
+    <footer>
+      <p>Shri Radha Enclave – Block B</p>
+      <p>Society information and announcements</p>
+    </footer>
+  </main>
+
+  <script>
+    if ("serviceWorker" in navigator &&
+        location.protocol.startsWith("http")) {
+      window.addEventListener("load", () => {
+        navigator.serviceWorker.register("./sw.js").catch(() => {});
+      });
+    }
+  </script>
+</body>
+</html>
